@@ -1,0 +1,70 @@
+.promo {
+	width: 100%;
+	
+	background: url('../img/desctop/promo-bg.png') no-repeat center center;
+	
+	.f-col;
+	align-items: center;
+	
+	height: 820px;
+	
+	position: relative; // для белого шума под шапкой
+	overflow-y: hidden; // т.к. поднял белый шум на 5 px
+}
+
+.white-noise--top {
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+}
+
+.promo__container {
+	.f-col;
+	align-items: center;
+	justify-content: space-between;
+	
+	//
+	padding: 80px 15px; // для 1920
+	//
+}
+
+
+.promo__text-block {
+	width: 100%;
+	.f-col;
+	align-self: flex-start;
+	
+	//
+	max-width: 800px; // изменяемое говно, т.к. с офером пока не ясно
+	//
+
+}
+
+h1 {
+	color: rgb(255, 255, 255);
+	font-size: 55px;
+	line-height: 1.3; // в макете 80px или 1.45
+	// bold
+	
+	text-align: left;
+	text-shadow: 0px 5px 7px rgba(0, 0, 0, 0.22);
+}
+
+.promo__price {
+	width: auto;
+	.f-row;
+	align-items: flex-end;
+
+	p {
+		color: @brand-yellow;
+		font-size: 20px;
+		// font-weight: ;
+		line-height: 1.75; // в макете 1.75
+		text-align: left;
+	}
+
+	img {
+		margin-right: 20px;
+	}
+}
