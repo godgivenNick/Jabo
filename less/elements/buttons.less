@@ -6,13 +6,13 @@
 	transition: .4s ease-out;
 }
 
-
+// promo
 .btn.promo__btn {
 	width: 100%;
 	@border-width: 1px;
 	
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: calc( 80px - @border-width * 2); // for 1920
 	
 
@@ -26,6 +26,31 @@
 	&:hover {
 		background-color: rgba(255,255,255,1);
 		border-color: rgba(255,255,255,1);
+		// можно придумать еще эффект
+	}
+}
+
+// footer
+.btn.footer__btn {
+	@border-width: 1px;
+	
+	font-size: 20px;
+	font-weight: 600;
+	line-height: calc( 50px - @border-width * 2); // for 1920
+	line-height: 52px; // for 1920
+	
+
+	color: @brand-night-blue;
+	background-color: white;
+	border: @border-width solid rgb(0,191,156);
+}
+
+.footer__btn.__hover {
+	&:hover {
+		background-image: -webkit-linear-gradient(20deg, rgb(0,191,156) 0%, rgb(60,218,114) 44%, rgb(119,244,71) 100%);
+		background-image: -o-linear-gradient(20deg, rgb(0,191,156) 0%, rgb(60,218,114) 44%, rgb(119,244,71) 100%);
+		background-image: linear-gradient(110deg, rgb(0,191,156) 0%, rgb(60,218,114) 44%, rgb(119,244,71) 100%);
+		
 		// можно придумать еще эффект
 	}
 }

@@ -1,0 +1,310 @@
+.catalog-block {
+	width: 100%;
+	.f-col;
+	align-items: center;
+}
+
+.catalog-block__container {
+	.f-col;
+	align-items: center;
+
+	color: @brand-night-blue;
+}
+
+.catalog-block__title {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.75;
+
+	text-align: center;
+
+	& + p {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.75;
+		text-align: center;
+
+		margin-bottom: 40px;
+	}
+}
+
+.catalog {
+	width: 100%;
+	.f-row;
+	.f-wrap;
+	justify-content: space-between;
+	// border: 1px solid orange;
+}
+
+@catalog-item-width: 280px;
+.catalog-item {
+	// width: 100%;
+	// max-width: calc(25% - 15px);
+	width: @catalog-item-width;
+
+	.f-col;
+	align-items: center;
+
+	border: 1px solid rgba(234, 234, 234, 1);
+	border-radius: 10px;
+
+	padding: 15px 0 0 0;
+	margin-bottom: 20px;
+	height: 570px;
+
+	transition: .3s ease;
+}
+
+.catalog-item-img__wrapper {
+	width: 100%;
+	.f-col;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 20px;
+	padding: 0 15px;
+}
+
+.catalog-item__title {
+	font-size: 16px;
+	font-weight: 600;
+
+	line-height: 1.5;
+	text-align: center;
+}
+
+.catalog-item-chars {
+	width: 100%;
+	.f-col;
+	align-items: flex-start;
+
+	padding: 0 15px 0 40px;
+
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
+.catalog-item-chars__text {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.5;
+
+	&--time,
+	&--radius,
+	&--weight,
+	&--speed {
+		text-align: left;
+		position: relative;	
+
+		&::before {
+			position: absolute;
+			left: -25px;
+			top: 2px;
+		}
+		
+		margin-bottom: 5px;
+		&:last-of-type { margin-bottom: 0; }
+
+	}
+}
+
+.catalog-item-chars__text--time:before { content: url('../img/desk/catalog/catalog-time.svg'); }
+.catalog-item-chars__text--radius:before { content: url('../img/desk/catalog/catalog-radius.svg'); }
+.catalog-item-chars__text--weight:before { content: url('../img/desk/catalog/catalog-weight.svg'); }
+.catalog-item-chars__text--speed:before { content: url('../img/desk/catalog/catalog-speed.svg'); }
+
+.catalog-item__btn-details {
+	.catalog-item-chars__text;
+
+	color: @brand-shit-green;
+	cursor: pointer;
+	font-weight: 600;
+
+	border-bottom: 2px dashed @brand-shit-green;
+	margin-bottom: 20px;
+
+	transition: .3s ease;
+
+	&.__hover {
+		&:hover {
+			color: @brand-night-blue;
+			border-color: @brand-night-blue;
+		}
+	}
+}
+
+.catalog-item-price-list {
+	width: 100%;
+	.f-row;
+	align-items: center;
+	justify-content: flex-start;
+
+	font-size: 16px;
+	font-weight: 400;
+
+	margin-bottom: 20px;
+
+	& > span { margin-right: 10px; }
+}
+.catalog-item-price-list__price {
+	color: @brand-shit-green;
+	font-weight: 600;
+	margin-right: 20px;
+}
+
+.catalog-item-price-list__price-del {
+	color: @brand-light-grey;
+	font-size: 13px;
+	text-decoration: line-through;
+}
+
+// paddingi suka blyat
+	.catalog-item__title,
+	.catalog-item-price-list {
+		padding: 0 15px;
+	}
+
+
+.catalog-item__btn {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 70px;
+	text-align: center;
+	color: @brand-night-blue;
+	text-transform: uppercase;
+ 
+	background-color: rgb(239, 239, 239);
+	border-top: 1px solid @brand-shit-green;
+
+	transition: .3s ease;
+	cursor: pointer;
+
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	&.__hover:hover {
+		background-color: @brand-night-blue;
+		color: white;
+	}
+
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '';
+		left: 1px;
+		top: calc(50% - 10px);
+
+		width: 40px;
+		height: 20px;
+	}
+}
+
+.catalog-item.__hover:hover {
+	.catalog-item__btn::before {
+		background: url('../img/desk/rewies/slider-btn.png') no-repeat center right;
+		animation: buyPlease .7s infinite;
+		animation-timing-function: ease-in-out;
+	}
+
+	border-color: @brand-night-blue;
+}
+.catalog-item__btn.__hover:hover {
+	&::before {
+		display: none;
+	}
+}
+
+
+// animation
+
+	@keyframes buyPlease {
+		0% {
+			left: 1px;
+		}
+		50% {
+			left: 20px;
+		}
+		100% {
+			left: 1px;
+		}
+	}
+
+// акция 20%
+	.catalog-item {
+		position: relative;
+		overflow: hidden;
+
+		&.__sale-20-percent {
+			&::before {
+				position: absolute;
+				content: '';
+	
+				width: 63px;
+				height: 58px;
+	
+				background: url('../img/desk/catalog/sale-20-percent.png') no-repeat;
+	
+				left: -1px;
+				top: -1px;
+
+				transition: .4s ease;
+
+				// animation: saleUprise 1s infinite;
+				// animation-delay: 10s;
+			}
+		}
+	}
+
+	// @keyframes saleUprise {
+	// 	0% {
+	// 		left: -100px;
+	// 	}
+	// 	95% {
+	// 		left: -1px;
+	// 	}
+
+	// 	100% {
+	// 		left: -100px;
+	// 	}
+	// }
+
+
+
+//////////////////////////////////////////////////
+///// media
+	@media screen and (max-width: 1200px) {
+		.catalog {
+			max-width: calc( @catalog-item-width * 3 + 40px );
+		}
+
+		.catalog-item:nth-of-type(7) {
+			margin-left: auto;
+			margin-right: 20px;
+		}
+		.catalog-item:nth-of-type(8) {
+			margin-right: auto;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		.catalog {
+			max-width: calc( @catalog-item-width * 2 + 40px );
+		}
+
+		.catalog-item:nth-of-type(7) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.catalog-item:nth-of-type(8) {
+			margin-right: 0;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.catalog {
+			max-width: calc( 320px - 15px * 2);
+			justify-content: center;
+		}
+	}

@@ -1,0 +1,108 @@
+.input-field {
+
+	position: relative;
+	.f-row;
+	align-items: center;
+
+
+	@input-pa-hor: 20px;
+	input {
+		width: 100%;
+
+		border: 1px solid;
+		border-radius: 10px;
+
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 2.5;
+		color: white;
+
+		.transition-input;
+		padding: 0 @input-pa-hor;
+	}
+
+	label {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 2.5;
+		color: white;
+
+		position: absolute;
+		left: @input-pa-hor;
+
+		.transition-input;
+	}
+}
+// promo
+.promo__input-field {
+	label {
+		color: rgba(255,255,255,.40);
+	}
+
+	input {
+		color: white;
+		background-color: rgba(10, 10, 10, .160);
+		border-color: rgba(255,255,255,.160);
+	}
+}
+
+// footer
+.footer__input-field {
+	label {
+		color: rgba(47, 52, 68, .4); // @brand-night-blue + opacity
+	}
+
+	input {
+		color: rgba(47, 52, 68, .4); // @brand-night-blue + opacity
+		background-color: white;
+		border-color: rgba(47, 52, 68, .4);
+	}
+}
+
+// label filled
+.label--filled {
+	& > label {
+		font-size: 10px;
+		transform: translate(0, -17px);
+	}
+}
+
+
+.transition-input {
+	transition: .4s ease;
+}
+
+
+.input-field {
+	label { .transition-input; }
+	input:focus ~ label,
+	label:focus {
+		font-size: 10px;
+		transform: translate(0, -17px);
+	}
+
+	// promo
+	&.promo__input-field input:focus ~ label,
+	&.promo__input-field label:focus {
+		color: white;
+	}
+
+	&.promo__input-field input:focus,
+	&.promo__input-field input:hover {
+		border-color: white;
+		color: white;
+	}
+
+	// footer
+	&.footer__input-field input:focus ~ label,
+	&.footer__input-field label:focus {
+		color: @brand-night-blue;
+	}
+
+	&.footer__input-field input:focus,
+	&.footer__input-field input:hover {
+		border-color: @brand-night-blue;
+		color: @brand-night-blue;
+	}
+
+}

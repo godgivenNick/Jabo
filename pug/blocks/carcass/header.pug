@@ -1,16 +1,39 @@
 header#promo.promo
-	img.white-noise--top(src="./img/desctop/white-noise--top.png", alt="")
+	img.white-noise--top(src="./img/desk/white-noise--top.png", alt="")
 	.container.promo__container
 		.promo__text-block
 			h1 Радиоуправляемые катера для рыбалки с эхолотом
 			.promo__price
-				img(src="./img/desctop/price-my.png", alt="")
+				img(src="./img/desk/price-my.png", alt="")
 				p Сом, щука, карп - не важно<br>Удиви жену и собаку - привези реальный улов!
+
 		.promo-gift
+
 			.promo-gift-today
+				.promo-gift-today__img-wrapper
+					img(src="../img/desk/today-only.png", alt="")
+					img.boat-abs(src="../img/desk/promo-boat.png", alt="")
+				.promo-gift-today__text
+					p ДО 23&nbsp;:&nbsp;59
+					p Закажи любой катер
+
 			.promo-gift-gift
+				img(src="./img/desk/arrow--white.png", alt="")
+				img(src="./img/desk/arrow--white.png", alt="")
+				.promo-gift-gift__title Получи на выбор<br><span>подарок!</span>
+				.promo-gift-gift-slider
+					.promo-gift-gift-slider-box
+						img(src="./img/desk/promo-gift-1.png", alt="Складная сетка-ловушка для рыб")
+						.promo-gift-gift-slider-box__text Складная сетка-ловушка для рыб
+					.promo-gift-gift-slider-box
+						img(src="./img/desk/promo-gift-2.png", alt="")
+						.promo-gift-gift-slider-box__text Складная сетка-ловушка для рыб
+					.promo-gift-gift-slider-box
+						img(src="./img/desk/promo-gift-3.png", alt="")
+						.promo-gift-gift-slider-box__text Складная сетка-ловушка для рыб
+
 			form.promo-gift-form
-				div.input-field.input-field--1
+				.input-field.promo__input-field
 					input(type="tel" name='phone' required id='promo-phone')
 					label(for="promo-phone") Ваш телефон:
 				button.btn.promo__btn(type='submit') Хочу подарок!

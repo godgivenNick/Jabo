@@ -1,0 +1,100 @@
+.buy-get {
+	width: 100%;
+	.f-col;
+	align-items: center;
+
+	background: url('../img/desk/buy-get-bg.png') no-repeat center center;
+	background-size: cover;
+
+	overflow: hidden;
+
+	padding: 120px 0;
+	color: white;
+
+	position: relative;
+	& > img {
+		position: absolute;
+		top: -40px;
+
+		&:last-of-type {
+			transform: rotate(180deg);
+			top: auto;
+			bottom: -40px;
+		}
+	}
+}
+
+
+.buy-get__title {
+	.reason-header__title;
+}
+
+
+.buy-get-benefits {
+	.reason-header-benefits;
+	width: 100%;
+
+	position: relative;
+	p {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.75;
+
+		position: relative;
+
+		margin-bottom: 20px;
+		text-shadow: 0px 5px 7px rgba(0, 0, 0, 0.22);
+
+		&::before {
+			position: absolute;
+			left: -50px;
+			top: 5px;
+		}
+	}
+}
+.buy-get-benefits__img {
+	position: absolute;
+	right: 0px;
+	top: -20px;
+}
+
+
+.buy-get-benefits__star:before { content: url('../img/desk/buy-get-star.svg'); }
+.buy-get-benefits__new:before { content: url('../img/desk/buy-get-new.svg'); }
+.buy-get-benefits__cool:before { content: url('../img/desk/buy-get-cool.svg'); }
+
+
+@media screen and (max-width: 1024px)  {
+	.buy-get {
+		padding: 80px 0 180px 0;
+	}
+	.buy-get__title {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.buy-get-benefits__img {
+		top: auto;
+		bottom: -150px;
+	}
+}
+
+@media screen and (max-width: 550px){
+	.buy-get {
+		// background-position: center left;
+	}
+	.buy-get__title {
+		font-size: 25px;
+	}
+	.buy-get-benefits {
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.buy-get-benefits__img {
+		transform: scale(.7);
+		left: -50px;
+	}
+	
+}
